@@ -24,10 +24,12 @@
 
 
 class user():
-    def __init__(self,i,na,s):
+    def __init__(self,i,na,s,k,msg):
         self.id = i
         self.name = na
         self.salary = s
+        self.des = k
+        self.msg=msg
     def get_salary(self):
         print(self.salary)
 
@@ -37,13 +39,19 @@ class project():
         self.name = n
         self.user = usr
 
+# class project_efo():
+#     def __init__(self,e,):
+#         self.ef= e
+
+
+
 us = []
-us.append(user(1,"ABC",100))
-us.append(user(2,"BCA",400))
-us.append(user(3,"CAB",600))
+us.append(user("U1","ABC",100,"A1","OU"))
+us.append(user("U2","BCA",400,"A2","UU"))
+us.append(user("U3","CAB",600,"A3","OU"))
 
 pro = []
-pro.append(project(1,"ABC",[us[0],us[2]]))
+pro.append(project(1,"ABC",[[us[0],40],[us[2],20]]))
 pro.append(project(2,"BCA",[us[1]]))
 print("Project class")
 for i in pro:
@@ -94,3 +102,4 @@ for i in pro:
     pro_d[i.id,i.name] = l1
 for k,v in pro_d.items():
     print(k,v)
+
