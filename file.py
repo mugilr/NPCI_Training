@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import abc
 
 
+=======
+>>>>>>> 93f003bd5ea746b059d93b0d5e5e88b1999fee57
 lst = [['Ram','ram@ab.com',12345],
         ['Som','som@ab.com',67890],
         [],
