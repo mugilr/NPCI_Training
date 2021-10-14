@@ -1,0 +1,14 @@
+ ######For Error Control#########
+                #2021-10-11 04:20:01,589 ERROR tool.ImportTool: Import failed: org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://localhost:54310/test already exists
+
+                if (line.find('ERROR') != -1):
+                    from airflow.operators.python import get_current_context
+                    context = get_current_context()
+                    ti = context['ti']
+                    ti.xcom_push(key='error', value=line)
+
+pwd
+/home/hduser_/.local/lib/python3.8/site-packages/airflow/hooks
+
+file
+subprocess.py
